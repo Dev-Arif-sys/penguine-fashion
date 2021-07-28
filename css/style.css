@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-color: #FFF9F4;
+    height: 90vh;
+}
+
+.navbar-color{
+    background-color: #FFF9F4;
+}
+
+    
+.hero-img img{
+    width: 500px;
+   
+}
+.hero-text{
+    width: 550px;
+}
+
+.hero-title{
+    font-size: 4.8rem;
+}
+.color-yellow-light{
+    color: #FA804C;
+}
+.color-dark-blue{
+    color: #363958;
+}
+.our-btn-bg{
+    background-color: #3745C6;
+    color: white;
+}
+.our-btn-bg:hover{
+    background-color: #0c1674;
+    color: white;
+}
+.card{
+    border: none;
+    transition: transform .2s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    display: block;
+}
+
+/* review section start */
+
+
+.single-box{
+    position: relative;
+ 
+}
+
+.review-card{
+   width: 99%;
+    max-width: 600px;
+   height: 450px;
+   background-color:rgb(3, 3, 46);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-radius: 15px;
+   padding: 20px;
+   color: white;
+
+}
+.single-box img{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.carousel-indicators{
+    margin-top: 70px;
+   
+}
+.carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+}
+textarea{
+    border: none;
+    outline: #3745C6;
+}
+ 
+/* reivew section end */
+
+
+
+@media screen and (max-width:1024px) {
+    .hero-title{
+        font-size: 4rem;
+    }
+    header{
+        background-color: #FFF9F4;
+        
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-img img{
+        width: 300px;
+       
+    }
+    .hero-text{
+        width: 100%;
+    }
+    
+
+}
+
