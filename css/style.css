@@ -5,7 +5,28 @@ body{
 }
 header{
     background-color: #FFF9F4;
-    height: 90vh;
+    height: auto;
+}
+#cart-container{
+    position: relative;
+}
+#cart-icon{
+    font-size: 1.3rem;
+    font-weight: 1rem;
+
+    
+}
+#cart-no{
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: red;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    border-radius: 50%;
+    color: white;
+    display: none;
 }
 
 .navbar-color{

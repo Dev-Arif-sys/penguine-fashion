@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike Ecommercer</title>
+    <title>Penguine Fashion</title>
 
     <!-- bootstrap style -->
 
@@ -12,6 +12,9 @@
     
     <!-- our style -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="">
@@ -33,7 +36,15 @@
                     <a class="nav-link text-dark me-5 " href="#" >About us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark" href="#" tabindex="-1" >Contact</a>
+                    <a class="nav-link text-dark me-5" href="#" tabindex="-1" >Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#" tabindex="-1" >
+                      <span id="cart-container">
+                        <i id="cart-icon" class="bi bi-cart"></i> 
+                          <span id="cart-no">1</span>
+                        </span> 
+                      </a>
                   </li>
                 </ul>
               </div>
@@ -54,7 +65,7 @@
                               <span class="color-yellow-light">Nike react</span><span class="color-dark-blue"> infinity run 2</span>
                           </h1>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Enim, voluptates. Lorem ipsum dolor sit amet.</p>
-                          <button class="btn our-btn-bg"><img src="/icons/shopping-cart 1.png" width="30" alt=""> Buy NOw</button>
+                          <button class="btn our-btn-bg"><img src="/icons/shopping-cart 1.png" width="30" alt="">Buy Now</button>
                       </div>
                   </div>
               </div>
@@ -77,8 +88,8 @@
                           <h3 class="card-title color-dark-blue">Nike Shoe</h3>
                           <p class="card-text">This is a short card. Lorem ipsum dolor sit, amet  elit. Dolorem, possimus... <a href="">See more</a></p>
                           <div class="d-flex justify-content-between mt-3">
-                              <h1 class="color-yellow-light">$250</h1>
-                              <button class="btn btn-primary">Buy Now</button>
+                              <h1 class="color-yellow-light">$<span id="product-price">200</span></h1>
+                              <button class="btn btn-primary">Add to cart</button>
                           </div>
                         </div>
                       </div>
@@ -90,8 +101,8 @@
                           <h3 class="card-title color-dark-blue">Sneaker skate Shoe</h3>
                           <p class="card-text">This is a short card. Lorem ipsum dolor sit, amet  elit. Dolorem, possimus... <a href="">see more</a></p>
                           <div class="d-flex justify-content-between mt-3">
-                            <h1 class="color-yellow-light">$250</h1>
-                            <button class="btn btn-primary">Buy Now</button>
+                            <h1 class="color-yellow-light">$150</h1>
+                            <button class="btn btn-primary">Add to cart</button>
                         </div>
                         </div>
                       </div>
@@ -105,8 +116,8 @@
                             This is a short card. Lorem ipsum dolor sit, amet  elit. Dolorem, possimus... <a href="">see more</a>
                           </p>
                           <div class="d-flex justify-content-between mt-3">
-                            <h1 class="color-yellow-light">$250</h1>
-                            <button class="btn btn-primary">Buy Now</button>
+                            <h1 class="color-yellow-light">$350</h1>
+                            <button class="btn btn-primary">Add to cart</button>
                         </div>
                         </div>
                       </div>
@@ -135,7 +146,7 @@
                           <p class="card-text">This is a short card. Lorem ipsum dolor sit, amet  elit. Dolorem, possimus... <a href="">See more</a></p>
                           <div class="d-flex justify-content-between mt-3">
                               <h1 class="color-yellow-light">$250</h1>
-                              <button class="btn btn-primary">Buy Now</button>
+                              <button class="btn btn-primary">Add to cart</button>
                           </div>
                         </div>
                       </div>
@@ -148,7 +159,7 @@
                           <p class="card-text">This is a short card. Lorem ipsum dolor sit, amet  elit. Dolorem, possimus... <a href="">see more</a></p>
                           <div class="d-flex justify-content-between mt-3">
                             <h1 class="color-yellow-light">$250</h1>
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
                         </div>
                         </div>
                       </div>
@@ -163,7 +174,7 @@
                           </p>
                           <div class="d-flex justify-content-between mt-3">
                             <h1 class="color-yellow-light">$250</h1>
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
                         </div>
                         </div>
                       </div>
@@ -359,5 +370,6 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
