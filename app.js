@@ -11,7 +11,7 @@ for (var btn of btns){
           let productTitle=parentOfBtn.parentElement.querySelector(".card-title");
 
           
-        console.log(productTitle,productPrice);
+        // console.log(productTitle,productPrice);
         updateCartNo(selectedBtn)
         updatingCart(productTitle,productPrice)
     })
@@ -33,26 +33,46 @@ function updateCartNo(selectedBtn){
 // cart section
 
 function updatingCart(productTitle,productPrice){
-    let container=document.getElementById("cartItem-container");
-    console.log("clicked")
+    let container=document.querySelector("#product-price");
+    // console.log("clicked")
     var rowDiv=document.createElement("div");
     rowDiv.classList.add("row");
     rowDiv.innerHTML=`
     <div class="col-md-7 center-item">
     
-    <h5>${productTitle.innerText}</h5>
+    <h6>${productTitle.innerText}</h6>
  </div>
 
  <div class="col-md-5 center-item">
-    <div class="input-group number-spinner">
-       <button id="phone-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
-       <input id="phone-num" type="number" min="0" class="form-control text-center" value="1">
-       <button id="phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
-    </div>
-    <h5>$<span id="phone-price">${productPrice.innerText}</span></h5>
+    <h5><span class="price">${productPrice.innerText}</span></h5>
     <img src="images/remove.png" alt="" class="remove-item">
  </div>
+
+ 
     `
 
-    container.appendChild(rowDiv);
+    container.append(rowDiv);
+
+
+
+    upadatingTotal()
+}
+
+
+function upadatingTotal(){
+    let prices=document.getElementsByClassName("price")
+    var priceValue="";
+    let totalPrice=0;
+    for (var price of prices){
+          priceValue= price.innerHTML;
+         let priceNum=priceValue.replace(priceValue[0],"")
+         totalPrice+=parseFloat(priceNum);
+      
+        
+         
+    }
+    console.log(totalPrice)
+    document.getElementById("total-price").innerText=totalPrice;
+
+    // console.log(price);
 }
