@@ -7,13 +7,15 @@ for (var btn of btns){
     btn.addEventListener("click",(e)=>{
           let selectedBtn=e.target;
           let parentOfBtn=selectedBtn.parentElement
+          let card=parentOfBtn.parentElement.parentElement
+          let imgSrc=card.querySelector("img").src
           let productPrice=parentOfBtn.querySelector(".color-yellow-light");
           let productTitle=parentOfBtn.parentElement.querySelector(".card-title");
 
           
         // console.log(productTitle,productPrice);
         updateCartNo(selectedBtn)
-        updatingCart(productTitle,productPrice)
+        updatingCart(productTitle,productPrice,imgSrc)
     })
    
 }
@@ -32,18 +34,21 @@ function updateCartNo(selectedBtn){
 
 // cart section
 
-function updatingCart(productTitle,productPrice){
+function updatingCart(productTitle,productPrice,imgSrc){
     let container=document.querySelector("#product-price");
     // console.log("clicked")
     var rowDiv=document.createElement("div");
     rowDiv.classList.add("row");
     rowDiv.innerHTML=`
-    <div class="col-md-7 center-item">
+    <div class="col-md-3 center-item">
+    <img src="${imgSrc}" class="checkout-product-img" width=50 height=50 alt="...">
+    </div>
+    <div class="col-md-6 center-item">
     
     <h6>${productTitle.innerText}</h6>
  </div>
 
- <div class="col-md-5 center-item">
+ <div class="col-md-3 center-item">
     <h5><span class="price">${productPrice.innerText}</span></h5>
     <img src="images/remove.png" alt="" class="remove-item">
  </div>

@@ -32,8 +32,14 @@ header{
 .navbar-color{
     background-color: #FFF9F4;
 }
-
-    
+ .offcanvas{
+        background-color:rgb(233, 220, 190);
+        /* color: white; */
+        height: auto;
+    }
+    .checkout-product-img{
+        border-radius: 50%;
+    }
 .hero-img img{
     width: 500px;
    
